@@ -26,7 +26,9 @@ function animate() {
     if (globalanimate) {
 
         if (y >= 500) {
-            y += -1
+            y -= 5
+            y2 -= 5
+
         }
 
         ctx.fillStyle = "white"
@@ -39,7 +41,10 @@ function animate() {
         ctx.beginPath()
         ctx.arc(350, y2, 20, 0, 2 * Math.PI)
         ctx.fill()
+
     }
+
+    requestAnimationFrame(animate)
 }
 
 
